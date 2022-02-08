@@ -6,11 +6,18 @@
         <title>Name Draw</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src = "indexV2.js"></script>
         <link href = "CSS.css" rel = "stylesheet">
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="tooltip"]').tooltip();
+            });
+        
+          </script>
     </head>
 
-    <body onload = "">
+    <body>
 
         <div class = "container mt-3">
 
@@ -31,41 +38,56 @@
 
                     <div id = "newTable"></div>
 
-                    <br>
+                    <div id = "formHolder">
+                        
+                        <br>
 
-                    <form id = "form">
+                        <form id = "form">
 
-                    <h6>Group/Family</h6>
+                            <h6>Group/Family</h6>
 
-                    <br>
+                            <br>
 
-                    <input id = "group" type = "text">
+                            <input id = "group" type = "text">
 
-                    <br>
+                            <br>
 
-                    <br>
+                            <br>
 
-                    <h6>Person's Name</h6>
+                            <h6>Person's Name</h6>
 
-                    <br>
+                            <br>
 
-                    <input id = "person" type = "text">
+                            <input id = "person" type = "text">
 
-                    <br>
+                            <br>
 
-                    <br>
+                            <br>
 
-                    <a onclick = "addPerson()" class = "btn btn-primary">Add Person</a>
+                        </form>
 
-                    <br>
+                        <a onclick = "addPerson()" class = "btn btn-primary">Add Person</a>
 
-                    <br>
+                        <br>
 
-                    <a id = "assign" onclick = "assign()" class = "btn btn-primary">Assign People</a>
+                        <br>
 
-                    <br>
+                        <a id = "assign" onclick = "assign()" class = "btn btn-primary">Assign People</a>
 
-                    <br>
+                        <br>
+
+                        <br>
+
+                        <h3>Additional Parameters</h3>
+
+                        <form id = "parameters">
+
+                            <input onclick = "groupGet()" type = "checkbox" id = "noGroupGet" name = "noGroupGet">
+                            <label>If checked: groups/familes cannot get someone within their group/family</label>
+
+                        </form>
+
+                    </div>
 
             </center>
         
